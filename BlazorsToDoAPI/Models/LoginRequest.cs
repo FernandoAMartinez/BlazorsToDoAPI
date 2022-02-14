@@ -1,13 +1,11 @@
 ﻿using MongoDB.Bson;
 using System.ComponentModel.DataAnnotations;
 
-namespace BlazorsToDoAPI.Models
+namespace BlazorsToDoAPI.Models;
+public class LoginRequest
 {
-    public class LoginRequest
-    {
-        [Required]
-        public string Email { get; set; }
-        [Required]
-        public string Password { get; set; }
-    }
+    [Required]
+    public string Email { get; set; }
+    [Required]
+    public string Password { get; set; }
 }

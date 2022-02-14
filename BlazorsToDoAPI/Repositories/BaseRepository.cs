@@ -42,7 +42,10 @@ namespace BlazorsToDoAPI.Repositories
             _clientSessionHandle.StartTransaction();
             try
             {
-                var filter = _filterDefinition.Eq("_id", obj.GetType().GetProperty("Id").GetValue(obj, null));
+                var filter = _filterDefinition.Eq("Id", obj.GetType().GetProperty("Id").GetValue(obj, null));
+                //var filter = _filterDefinition.Eq(s => s.GetType().GetProperty("Id"), 
+                //    obj.GetType().GetProperty("Id").GetValue(obj, null));
+
                 if (obj is not null)
                 {
                     await Collection.ReplaceOneAsync(_clientSessionHandle, filter, obj);

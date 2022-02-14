@@ -1,11 +1,9 @@
 ﻿using BlazorsToDoAPI.Models;
 
-namespace BlazorsToDoAPI.Repositories
+namespace BlazorsToDoAPI.Repositories;
+public interface ITaskRepository : IRepositoryBase<TaskResponse>
 {
-    public interface ITaskRepository : IRepositoryBase<TaskModel>
-    {
-        Task<TaskModel> GetById(Guid guid);
-        Task<IEnumerable<TaskModel>> GetByUserId(Guid userGuid);
-        Task<IEnumerable<TaskModel>> GetAll();
-    }
+    Task<TaskResponse> GetById(Guid guid);
+    Task<IEnumerable<TaskResponse>> GetByUserId(Guid userGuid);
+    Task<IEnumerable<TaskResponse>> GetAll();
 }
