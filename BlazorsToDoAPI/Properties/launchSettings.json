@@ -23,6 +23,7 @@
         "MONGODB_BASENAME": "your-mongodb-database-name",
         "TASK_COLLECTION": "your-mongodb-taskcollection-name",
         "USERS_COLLECTION": "your-mongodb-usercollection-name",
+        "COMMENTS_COLLECTION": "your-mongodb-comments-name",
         "JWT_SECRET": "your-jwt-secret"
       }
     },
@@ -40,6 +41,7 @@
         "MONGODB_BASENAME": "your-mongodb-database-name",
         "TASK_COLLECTION": "your-mongodb-taskcollection-name",
         "USERS_COLLECTION": "your-mongodb-usercollection-name",
+        "COMMENTS_COLLECTION": "your-mongodb-comments-name",
         "JWT_SECRET": "your-jwt-secret"
       }
     },
@@ -57,6 +59,7 @@
         "MONGODB_BASENAME": "your-mongodb-database-name",
         "TASK_COLLECTION": "your-mongodb-taskcollection-name",
         "USERS_COLLECTION": "your-mongodb-usercollection-name",
+        "COMMENTS_COLLECTION": "your-mongodb-comments-name",
         "JWT_SECRET": "your-jwt-secret"
       }
     },
@@ -72,6 +75,7 @@
         "MONGODB_BASENAME": "your-mongodb-database-name",
         "TASK_COLLECTION": "your-mongodb-taskcollection-name",
         "USERS_COLLECTION": "your-mongodb-usercollection-name",
+        "COMMENTS_COLLECTION": "your-mongodb-comments-name",
         "JWT_SECRET": "your-jwt-secret"
       }
     }
