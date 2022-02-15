@@ -63,7 +63,7 @@ namespace BlazorsToDoAPI.Repositories
             
             try
             {
-                var filter = _filterDefinition.Eq("id", guid);
+                var filter = _filterDefinition.Eq("Id", guid);
                 await Collection.DeleteOneAsync(_clientSessionHandle, filter);
                 await _clientSessionHandle.CommitTransactionAsync();
             }
