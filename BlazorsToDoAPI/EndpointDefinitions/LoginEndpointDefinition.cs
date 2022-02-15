@@ -10,14 +10,6 @@ public class LoginEndpointDefinition : IEndpointDefinition
 {
     public void DefineEndpoints(WebApplication app)
     {
-        //app.MapGet("auth/users", [Authorize] async (ILoginRepository repository) =>
-        //    await repository.GetAll())
-        //    .Produces<IEnumerable<User>>(StatusCodes.Status200OK)
-        //    .Produces(StatusCodes.Status401Unauthorized)
-        //    .WithName("Get List of Users")
-        //    .WithTags("User Management")
-        //    .RequireAuthorization();
-
         app.MapPost("auth/register", async ([FromBody] RegisterRequest registerUser, ILoginRepository repository) =>
             await repository.Create(new User()
             {
@@ -46,11 +38,16 @@ public class LoginEndpointDefinition : IEndpointDefinition
                     if (token is not null)
                     {
                         //logedUser.LastJWT = token;
-                        return new
+                        //return new
+                        //{
+                        //    UserId = logedUser.Id,
+                        //    //logedUser.Name,
+                        //    //JWT = logedUser.LastJWT
+                        //    JWT = token
+                        //};
+                        return new LoginResponse()
                         {
                             UserId = logedUser.Id,
-                            //logedUser.Name,
-                            //JWT = logedUser.LastJWT
                             JWT = token
                         };
                     }
